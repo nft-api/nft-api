@@ -1,3 +1,3 @@
-# `ethereum-boilerplate`
+# `nft api`
 
-Ethereum NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions. Cross-Chain NFT API.
+NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions. Cross-Chain NFT API.
