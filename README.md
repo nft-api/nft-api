@@ -6,7 +6,7 @@ The NFT API for fast and easy getting resolved data from Ethereum (ETH), Binance
 
 # 🚀 `Quick Start`
 
-All NFT API requests requre the `X-API-KEY`. You can get your free NFT API KEY here https://admin.moralis.io/web3Api#
+All NFT API requests require the `X-API-KEY`. You can get your free NFT API KEY here https://admin.moralis.io/web3Api#
 
 ![image](https://user-images.githubusercontent.com/78314301/146573619-77372114-034b-4d75-af7f-f72839fdeb0b.png)
 
