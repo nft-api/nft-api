@@ -12,12 +12,9 @@ This API is widely used in the web3 industry and is powering many projects.
 
 # 🚀 `Quick Start`
 
-All NFT API requests require the `X-API-KEY`. You can get your free NFT API KEY here https://admin.moralis.io/web3Api#
-
-![image](https://user-images.githubusercontent.com/78314301/146573619-77372114-034b-4d75-af7f-f72839fdeb0b.png)
-
-
-The NFT API can be used for getting NFT data using REST API requests or Moralis SDK. NFT API call examples are showed here for the Moralis SDK and REST API.
+1) Sign up at https://moralis.io
+2) See example requests below
+3) Read full docs: https://docs.moralis.io/moralis-server/web3-sdk
 
 # ⭐️ `Star us`
 
