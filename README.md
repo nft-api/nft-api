@@ -2,11 +2,16 @@
 
 > NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions. Cross-Chain NFT API.
 
-The NFT API for fast and easy getting resolved data from Ethereum (ETH), Binance Smart Chain (BSC), Polygon (MATIC), Avalanche (AVAX) blockhains. Also has a support for testnets.
+### `Chains supported`
+The NFT API supports the following chains: 
+1) Ethereum (ETH)
+2) Binance Smart Chain (BSC) 
+3) Polygon (MATIC)
+4) Avalanche (AVAX) 
+5) Fantom (FTM)
+6) Testnets are fully supported.
 
 This API is widely used in the web3 industry and is powering many prominent web3 projects.
-
-Get NFT Metadata, NFT Owners, NFT Balances, Search NFTs Based on Metadata, and so much more!
 
 ![unnamed](https://user-images.githubusercontent.com/11097108/146640298-12da8642-8580-4906-a350-826f64970916.gif)
 
