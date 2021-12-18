@@ -6,7 +6,7 @@ The NFT API for fast and easy getting resolved data from Ethereum (ETH), Binance
 
 Get NFT Metadata, NFT Owners, NFT Balances, Search NFTs Based on Metadata, and so much more!
 
-This API is widely used in the web3 industry and is powering many projects.
+This API is widely used in the web3 industry and is powering many prominent web3 projects.
 
 
 
