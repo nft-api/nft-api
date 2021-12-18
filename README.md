@@ -4,9 +4,11 @@
 
 The NFT API for fast and easy getting resolved data from Ethereum (ETH), Binance Smart Chain (BSC), Polygon (MATIC), Avalanche (AVAX) blockhains. Also has a support for testnets.
 
+This API is widely used in the web3 industry and is powering many prominent web3 projects.
+
 Get NFT Metadata, NFT Owners, NFT Balances, Search NFTs Based on Metadata, and so much more!
 
-This API is widely used in the web3 industry and is powering many prominent web3 projects.
+![bored-ape](https://user-images.githubusercontent.com/11097108/146640225-91ca3cb8-280a-4216-b3d8-29a00354e7fe.gif)
 
 
 
@@ -15,6 +17,9 @@ This API is widely used in the web3 industry and is powering many prominent web3
 1) Sign up at https://moralis.io
 2) See example requests below
 3) Read full docs: https://docs.moralis.io/moralis-server/web3-sdk
+
+You can either call the API endpoints using REST HTTP requests or using the Moralis SDK. 
+Both methods are demonstrated below for each endpoint. 
 
 # ⭐️ `Star us`
 
