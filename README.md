@@ -8,6 +8,8 @@ NFT API is a central part of any NFT dapp. Whether you build an NFT game, wallet
 3) **NFT Transfer data**
 4) **NFT Prices**
 
+See full ![table of contents](https://github.com/nft-api/nft-api/blob/main/README.md#-table-of-contents).
+
 If these features are required in your dapp - keep reading!
 
 ### `Chains supported`
