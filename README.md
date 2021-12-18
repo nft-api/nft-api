@@ -8,8 +8,7 @@ This API is widely used in the web3 industry and is powering many prominent web3
 
 Get NFT Metadata, NFT Owners, NFT Balances, Search NFTs Based on Metadata, and so much more!
 
-![bored-ape](https://user-images.githubusercontent.com/11097108/146640225-91ca3cb8-280a-4216-b3d8-29a00354e7fe.gif)
-
+![unnamed](https://user-images.githubusercontent.com/11097108/146640298-12da8642-8580-4906-a350-826f64970916.gif)
 
 
 # 🚀 `Quick Start`
