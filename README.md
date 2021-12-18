@@ -2,6 +2,14 @@
 
 > NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions. Cross-Chain NFT API.
 
+NFT API is a central part of any NFT dapp. Whether you build an NFT game, wallet, marketplace, analytics site, dashboard or something else based on NFTs you need to have a reliable NFT API that can help you get things such as: 
+1) NFT Metadata
+2) NFT Ownership data
+3) NFT Transfer data
+4) NFT Prices
+
+If these features are required in your dapp - keep reading!
+
 ### `Chains supported`
 The NFT API supports the following chains: 
 1) Ethereum (ETH)
