@@ -31,7 +31,7 @@ If this NFT API helps you - please star this project, every star makes us very h
 
 # 🚀 `Quick Start`
 
-1) Sign up at https://moralis.io
+1) Sign up at [Moralis](https://moralis.io?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
 2) See example requests below
 3) Read full docs: https://docs.moralis.io/moralis-server/web3-sdk
 
