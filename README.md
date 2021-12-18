@@ -4,6 +4,12 @@
 
 The NFT API for fast and easy getting resolved data from Ethereum (ETH), Binance Smart Chain (BSC), Polygon (MATIC), Avalanche (AVAX) blockhains. Also has a support for testnets.
 
+Get NFT Metadata, NFT Owners, NFT Balances, Search NFTs Based on Metadata, and so much more!
+
+This API is widely used in the web3 industry and is powering many projects.
+
+
+
 # 🚀 `Quick Start`
 
 All NFT API requests require the `X-API-KEY`. You can get your free NFT API KEY here https://admin.moralis.io/web3Api#
@@ -12,24 +18,6 @@ All NFT API requests require the `X-API-KEY`. You can get your free NFT API KEY 
 
 
 The NFT API can be used for getting NFT data using REST API requests or Moralis SDK. NFT API call examples are showed here for the Moralis SDK and REST API.
-
-### Example of using:
-
-Let's call the `SearchNFTs` NFT API Endpoint. We can find the example bellow here in the docs.
-
-#### CURL
-
-```bash
-curl -X 'GET' \
-  'https://deep-index.moralis.io/api/v2/nft/search?chain=eth&format=decimal&q={q}&filter=name' \
-  -H 'accept: application/json'
-  -H 'X-API-Key: YOUR_API_KEY'
-```
-
-To call this NFT API Endpoint you can use for example a git bash. For example let's search Bored Ape Yacht Club NFTs. The request should be provided like this:
-```bash
-curl -X 'GET' 'https://deep-index.moralis.io/api/v2/nft/search?chain=eth&format=decimal&q=bored&filter=name' -H 'accept: application/json' -H 'X-API-Key: YOUR_API_KEY'
-```
 
 # ⭐️ `Star us`
 
