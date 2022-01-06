@@ -581,9 +581,7 @@ NFT API gets the contract level metadata (name, symbol, base token uri) for the 
 
 - `address` _(required)_: The address of the token contract.
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
-- `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
-- `offset` _(optional)_: offset.
-- `limit` _(optional)_: limit.
+
 
 #### Moralis SDK
 
@@ -684,7 +682,7 @@ curl -X 'GET' \
 
 ### `GetNFTTrades`
 
-NFT API gets
+NFT API gets the nft trades for a given contracts and marketplace
 
 **Options**:
 
@@ -695,6 +693,7 @@ NFT API gets
 - `from_block` _(optional)_: The minimum block number from where to get the tradesProvide the param 'from_block' or 'from_date' If 'from_date' and 'from_block' are provided, 'from_block' will be used.
 - `to_block` _(optional)_: The maximum block number from where to get the trades. Provide the param 'to_block' or 'to_date' If 'to_date' and 'to_block' are provided, 'to_block' will be used.
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
+- `provider_url` _(optional)_: Web3 provider url to user when using local dev chain.
 - `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
 - `offset` _(optional)_: offset.
 - `limit` _(optional)_: limit.
@@ -755,13 +754,11 @@ NFT API gets data, including metadata (where available), for the given token id 
 - `token_id` _(required)_: The id of the token.
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
 - `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
-- `offset` _(optional)_: offset.
-- `limit` _(optional)_: limit.
 
 #### Moralis SDK
 
 ```js
-const options = { address: "0xd...07", token_id: "1", chain: "bsc" };
+const options = { address: "0xb...3d", token_id: "56", chain: "eth" };
 const tokenIdMetadata = await Moralis.Web3API.token.getTokenIdMetadata(options);
 ```
 
@@ -784,25 +781,31 @@ curl -X 'GET' \
 
 ```json
 {
-  "token_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-  "token_id": "15",
-  "contract_type": "ERC721",
-  "token_uri": "string",
-  "metadata": "string",
-  "synced_at": "string",
+  "token_address": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+  "token_id": "56",
+  "block_number_minted": "12299286",
+  "owner_of": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+  "block_number": "13729519",
   "amount": "1",
-  "name": "CryptoKitties",
-  "symbol": "RARI"
+  "contract_type": "ERC721",
+  "name": "BoredApeYachtClub",
+  "symbol": "BAYC",
+  "token_uri": "string",
+  "synced_at": "2021-11-25T11:22:45.283Z",
+  "is_valid": 1,
+  "syncing": 2,
+  "frozen": 1
 }
 ```
 
 ### `GetTokenIdOwners`
 
-NFT API gets
+NFT API gets owners of NFT token id within a given contract collection
 
 **Options**:
 
 - `address` _(required)_: The address of the token contract.
+- `token_id`_(required)_: The id of the token.
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
 - `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
 - `offset` _(optional)_: offset.
@@ -834,25 +837,27 @@ curl -X 'GET' \
 
 ```json
 {
-  "status": "SYNCING",
-  "total": 2000,
-  "page": 2,
-  "page_size": 100,
+  "total": 1,
+  "page": 0,
+  "page_size": 500,
   "result": [
     {
-      "token_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-      "token_id": "15",
+      "token_address": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+      "token_id": "56",
+      "block_number_minted": "12299286",
+      "owner_of": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+      "block_number": "13729519",
+      "amount": "1",
       "contract_type": "ERC721",
-      "owner_of": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-      "block_number": "88256",
-      "block_number_minted": "88256",
+      "name": "BoredApeYachtClub",
+      "symbol": "BAYC",
       "token_uri": "string",
       "metadata": "string",
-      "synced_at": "string",
-      "amount": "1",
-      "name": "CryptoKitties",
-      "symbol": "RARI"
+      "is_valid": 1,
+      "syncing": 2,
+      "frozen": 1
     }
-  ]
+  ],
+  "status": "SYNCED"
 }
 ```
