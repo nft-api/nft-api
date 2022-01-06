@@ -51,7 +51,7 @@ If you need help with using the NFT API or have other questions - don't hesitate
   - [`GetNFTs`](#getnfts)
   - [`GetNFTsForContract`](#getnftsforcontract)
   - [`GetNFTTransfers`](#getnfttransfers)
-  - [`GetNFTTransfersByBlock`](#GetNFTTransfersByBlock)
+  - [`GetNFTTransfersByBlock`](#getnfttransfersbyblock)
   - [`GetAllTokenIds`](#getalltokenids)
   - [`GetContractNFTTransfers`](#getcontractnfttransfers)
   - [`GetNFTLowestPrice`](#getnftlowestprice)
@@ -148,7 +148,7 @@ NFT API gets all NFTs from the current user or address. Supports both ERC721 and
 #### Moralis SDK
 
 ```js
-onst options = { chain: 'matic', address: '0x...', limit 1 };
+onst options = { chain: 'polygon', address: '0x...', limit 1 };
 const polygonNFTs = await Moralis.Web3API.account.getNFTs(options);
 ```
 
@@ -213,7 +213,7 @@ NFT API gets an object with the NFT count for the specified contract and an NFT 
 #### Moralis SDK
 
 ```js
-const options = { chain: "matic", address: "0x...", token_address: "0x...", limit: 1 };
+const options = { chain: "polygon", address: "0x...", token_address: "0x...", limit: 1 };
 const polygonNFTs = await Moralis.Web3API.account.getNFTsForContract(options);
 ```
 
@@ -274,12 +274,13 @@ NFT API gets the NFT transfers. Returns an object with the number of NFT transfe
 - `offset` _(optional)_: offset.
 - `limit` _(optional)_: limit.
 - `direction` _(optional)_: The transfer direction. Available values : both, to, from . Default value : both.
+- `cursor` _(optional)_: The cursor returned in the last response (for getting the next page). 
 - `order` _(optional)_: The field(s) to order on and if it should be ordered in ascending or descending order.
 
 #### Moralis SDK
 
 ```js
-const options = { chain: "bsc", address: "0x...", limit: "10" };
+const options = { chain: "polygon", address: "0x...", limit: "10" };
 const transfersNFT = await Moralis.Web3API.account.getNFTTransfers(options);
 ```
 
@@ -305,6 +306,7 @@ curl -X 'GET' \
   "total": 2000,
   "page": 2,
   "page_size": 100,
+  "cursor": "string",
   "result": [
     {
       "token_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
@@ -324,7 +326,8 @@ curl -X 'GET' \
       "operator": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e"
     }
   ],
-  "block_exists": true
+  "block_exists": true,
+  "index_complete": true
 }
 ```
 
@@ -336,7 +339,9 @@ NFT API gets NFT transfers by block number or block hash
 
 - `block_number_or_hash` _(required)_: The block hash or block number.
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
+- `subdomain`_(optional)_: The subdomain of the moralis server to use (Only use when selecting local devchain as chain).
 - `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
+- `cursor` _(optional)_: The cursor returned in the last response (for getting the next page). 
 - `offset` _(optional)_: offset.
 - `limit` _(optional)_: limit.
 
@@ -369,6 +374,7 @@ curl -X 'GET' \
   "total": 2000,
   "page": 2,
   "page_size": 100,
+  "cursor": "string",
   "result": [
     {
       "token_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
@@ -458,6 +464,7 @@ NFT API gets an object with number of NFT transfers and an array with NFT transf
 - `address` _(required)_: The address of the token contract.
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
 - `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
+- `cursor` _(optional)_: The cursor returned in the last response (for getting the next page). 
 - `offset` _(optional)_: offset.
 - `limit` _(optional)_: limit.
 
@@ -490,19 +497,28 @@ curl -X 'GET' \
   "total": 2000,
   "page": 2,
   "page_size": 100,
+  "cursor": "string",
   "result": [
     {
       "token_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
       "token_id": "15",
-      "contract_type": "ERC721",
-      "token_uri": "string",
-      "metadata": "string",
-      "synced_at": "string",
+      "from_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
+      "to_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
+      "value": "1000000000000000",
       "amount": "1",
-      "name": "CryptoKitties",
-      "symbol": "RARI"
+      "contract_type": "ERC721",
+      "block_number": "88256",
+      "block_timestamp": "2021-06-04T16:00:15",
+      "block_hash": "string",
+      "transaction_hash": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
+      "transaction_type": "string",
+      "transaction_index": "string",
+      "log_index": 0,
+      "operator": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e"
     }
-  ]
+  ],
+  "block_exists": true,
+  "index_complete": true
 }
 ```
 
@@ -514,6 +530,7 @@ NFT API gets an object with the lowest price found for a NFT token contract for 
 
 - `address` _(required)_: The address of the token contract.
 - `days` _(optional)_: The number of days to look back to find the lowest price If not provided 7 days will be the default.
+- `provider_url`_(optional)_: Web3 provider url to user when using local dev chain.
 - `marketplace` _(optional)_: Marketplace from where to get the trades (only opensea is supported at the moment).
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
 
