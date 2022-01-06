@@ -118,8 +118,8 @@ curl -X 'GET' \
     {
       "token_id": "657",
       "token_address": "0x5bc94e9347f3b9be8415bdfd24af16666704e44f",
-      "token_uri": "https://www.bakeryswap.org/api/v1/artworks/6ded6885371645dfaadc44637b07922a",
-      "metadata": "{\"name\":\"Mom STARTs PANCAKE\",\"description\":\"My Mom just started staking $CAKE. Celebration for her first day of PancakeSwap. 2021.01.24\",\"properties\":{\"artist\":\"My Mom\",\"public_profile_link\":\"https://twitter.com/univcash\"},\"image\":\"https://d3ggs2vjn5heyw.cloudfront.net/static/nfts/artworks/47531cba2f5543fd99b241a5b8d67e2e.gif\"}",
+      "token_uri": "string",
+      "metadata": "string",
       "contract_type": "ERC721",
       "token_hash": "44b2fa25bc5f9acc0cfc61a61e71ffa9",
       "minter_address": "0xf1b51a4f5b61aa81958acf6ac9a9c1b2940fc4b2",
