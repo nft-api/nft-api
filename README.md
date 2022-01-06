@@ -78,13 +78,17 @@ NFT API gets the NFT data based on a metadata search.
 - `filter` _(required)_: What fields the search should match on. To look into the entire metadata set the value to global. To have a better response time you can look into a specific field like name. Available values : name; description; attributes; global; name,description; name,attributes; description,attributes; name,description,attributes
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
 - `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
+- `from_block` _(optional)_: The minimum block number from where to start the search (if 'from_date' and 'from_block' are provided, 'from_block' will be used).
+- `to_block` _(optional)_: The maximum block number from where to end the search (if 'to_date' and 'to_block' are provided, 'to_block' will be used).
+- `from_date` _(optional)_: The date from where to start the search (any format that is accepted by momentjs).
+- `to_date` _(optional)_: Get search results up until this date (any format that is accepted by momentjs).
 - `offset` _(optional)_: offset.
 - `limit` _(optional)_: limit.
 
 #### Moralis SDK
 
 ```js
-const options = { q: "Pancake", chain: "bsc", filter: "name" };
+const options = { q: "Pancake", chain: "bsc", filter: "name", limit: 1 };
 const NFTs = await Moralis.Web3API.token.searchNFTs(options);
 ```
 
@@ -106,18 +110,26 @@ curl -X 'GET' \
 **Example return**
 
 ```json
-[
-  {
-    "token_id": "124436",
-    "token_address": "0x3afa102b264b5f79ce80fed29e0724f922ba57c7",
-    "token_uri": "https://ipfs.moralis.io:2053/ipfs/QmVAD8v4s2SXF8FgjePqMdQ2GV5hE2isZnzxcrA36XcSDA/metadata.json",
-    "metadata": "{\"name\":\"Pancake\",\"description\":\"The dessert series 1\",\"image\":\"ipfs://QmNQFXCZ6LGzvpMW9Q5PWbCrEnLknQrPwr2r8pbQAgzQ9A/4863BD6B-6C92-4B96-BF80-8020B2F7C3A5.jpeg\"}",
-    "contract_type": "ERC721",
-    "token_hash": "d03fe436e972bf9215d7bb8c64c4c556",
-    "synced_at": null,
-    "created_at": "2021-09-19T10:36:16.610Z"
-  }
-]
+{
+  "total": 81259,
+  "page": 0,
+  "page_size": "1",
+  "result": [
+    {
+      "token_id": "657",
+      "token_address": "0x5bc94e9347f3b9be8415bdfd24af16666704e44f",
+      "token_uri": "https://www.bakeryswap.org/api/v1/artworks/6ded6885371645dfaadc44637b07922a",
+      "metadata": "{\"name\":\"Mom STARTs PANCAKE\",\"description\":\"My Mom just started staking $CAKE. Celebration for her first day of PancakeSwap. 2021.01.24\",\"properties\":{\"artist\":\"My Mom\",\"public_profile_link\":\"https://twitter.com/univcash\"},\"image\":\"https://d3ggs2vjn5heyw.cloudfront.net/static/nfts/artworks/47531cba2f5543fd99b241a5b8d67e2e.gif\"}",
+      "contract_type": "ERC721",
+      "token_hash": "44b2fa25bc5f9acc0cfc61a61e71ffa9",
+      "minter_address": "0xf1b51a4f5b61aa81958acf6ac9a9c1b2940fc4b2",
+      "block_number_minted": "4273701",
+      "transaction_minted": "0x803297f832677fbc5af00c23db241858bf1aa05893b11d6514f3f2accc63be85",
+      "synced_at": "2021-11-08T12:09:17.033Z",
+      "created_at": "2021-08-21T16:16:59.325Z"
+    }
+  ]
+}
 ```
 
 ### `GetNFTs`
@@ -129,13 +141,14 @@ NFT API gets all NFTs from the current user or address. Supports both ERC721 and
 - `address` _(required)_: A user address (i.e. 0x1a2b3x...).
 - `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
 - `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
+- `token_addresses` _(optional)_: The addresses to get balances for (array of strings)
 - `offset` _(optional)_: offset.
 - `limit` _(optional)_: limit.
 
 #### Moralis SDK
 
 ```js
-onst options = { chain: 'matic', address: '0x...' };
+onst options = { chain: 'matic', address: '0x...', limit 1 };
 const polygonNFTs = await Moralis.Web3API.account.getNFTs(options);
 ```
 
@@ -157,25 +170,34 @@ curl -X 'GET' \
 **Example return**
 
 ```json
-[
-  {
-    "token_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-    "token_id": "15",
-    "contract_type": "ERC721",
-    "owner_of": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-    "block_number": "88256",
-    "block_number_minted": "88256",
-    "token_uri": "string",
-    "metadata": "string",
-    "synced_at": "string",
-    "amount": "1",
-    "name": "CryptoKitties",
-    "symbol": "RARI"
-  }
-]
+{
+  "total": 1,
+  "page": 0,
+  "page_size": 1,
+  "result": [
+    {
+      "token_address": "0x2953399124f0cbb46d2cbacd8a89cf0599974963",
+      "token_id": "113461209507512867518933452141320285231135646094834536306130710958634510057473",
+      "block_number_minted": "20679123",
+      "owner_of": "0x...",
+      "block_number": "20679123",
+      "amount": "1",
+      "contract_type": "ERC1155",
+      "name": "OpenSea Collections",
+      "symbol": "OPENSTORE",
+      "token_uri": "string",
+      "metadata": null,
+      "synced_at": "2021-10-27T20:29:41.933Z",
+      "is_valid": 0,
+      "syncing": 2,
+      "frozen": 0
+    }
+  ],
+  "status": "SYNCED"
+}
 ```
 
-### `GetNFTsForContract
+### `GetNFTsForContract`
 
 NFT API gets an object with the NFT count for the specified contract and an NFT array belonging to the given address for the specified contract.
 
@@ -191,7 +213,7 @@ NFT API gets an object with the NFT count for the specified contract and an NFT 
 #### Moralis SDK
 
 ```js
-const options = { chain: "matic", address: "0x...", token_address: "0x..." };
+const options = { chain: "matic", address: "0x...", token_address: "0x...", limit: 1 };
 const polygonNFTs = await Moralis.Web3API.account.getNFTsForContract(options);
 ```
 
@@ -214,26 +236,29 @@ curl -X 'GET' \
 
 ```json
 {
-  "status": "SYNCING",
-  "total": 2000,
-  "page": 2,
-  "page_size": 100,
+  "total": 6,
+  "page": 0,
+  "page_size": 1,
   "result": [
     {
-      "token_address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-      "token_id": "15",
-      "contract_type": "ERC721",
-      "owner_of": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-      "block_number": "88256",
-      "block_number_minted": "88256",
+      "token_address": "0x51ac4a13054d5d7e1fa795439821484177e7e828",
+      "token_id": "57910179610855907966122798329494209064134810262659925031627655157058428245394",
+      "block_number_minted": "20698149",
+      "owner_of": "0x...",
+      "block_number": "20698149",
+      "amount": "1",
+      "contract_type": "ERC1155",
+      "name": "REVV Motorsport Inventory",
+      "symbol": "REVVM",
       "token_uri": "string",
       "metadata": "string",
-      "synced_at": "string",
-      "amount": "1",
-      "name": "CryptoKitties",
-      "symbol": "RARI"
+      "synced_at": "2021-10-28T09:39:02.880Z",
+      "is_valid": 1,
+      "syncing": 2,
+      "frozen": 0
     }
-  ]
+  ],
+  "status": "SYNCED"
 }
 ```
 
