@@ -99,7 +99,7 @@ GET /nft/search
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/search?chain=eth&format=decimal&q={q}&filter=name' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -150,7 +150,7 @@ GET /{address}/nft
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/0xaddress/nft?chain=eth&format=decimal' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -206,7 +206,7 @@ GET /{address}/nft/{token_address}
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/{address}/nft/{token_address}?chain=eth&format=decimal' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -333,7 +333,7 @@ GET /block/{block_number_or_hash}/nft/transfers
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/block/{block_number_or_hash}/nft/transfers?chain=eth&limit=500' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -397,7 +397,7 @@ GET /nft/{address}
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}?chain=eth&format=decimal' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -454,7 +454,7 @@ GET ​/nft​/{address}​/transfers
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}/transfers?chain=eth&format=decimal' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -510,7 +510,7 @@ GET ​/nft​/{address}​/lowestprice
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}​/lowestprice?chain=eth&marketplace=opensea' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -561,7 +561,7 @@ GET ​/nft​/{address}​/metadata
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}/metadata?chain=eth' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -609,7 +609,7 @@ GET ​/nft​/{address}​/owners
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}/owners?chain=eth&format=decimal' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -675,7 +675,7 @@ GET ​/nft​/{address}​/trades
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}​/trades?chain=eth&marketplace=opensea' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -734,7 +734,7 @@ GET ​/nft​/{address}​/{token_id}
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}​/{token_id}?chain=eth&format=decimal' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
@@ -784,7 +784,7 @@ GET ​/nft​/{address}​/{token_id}​/owners
 ```bash
 curl -X 'GET' \
   'https://deep-index.moralis.io/api/v2/nft/{address}/{token_id}/owners?chain=eth&format=decimal' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
   -H 'X-API-Key: YOUR_API_KEY'
 ```
 
