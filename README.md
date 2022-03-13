@@ -175,7 +175,7 @@ curl -X 'GET' \
 ]
 ```
 
-### `GetNFTsForContract
+### `GetNFTsForContract`
 
 NFT API gets an object with the NFT count for the specified contract and an NFT array belonging to the given address for the specified contract.
 
