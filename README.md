@@ -760,7 +760,7 @@ curl -X 'GET' \
 
 ### `GetTokenIdOwners`
 
-NFT API gets
+NFT API gets an object with number of NFT transfers and an array with all owners of NFT items within a given contract collection (asynchronous).
 
 **Options**:
 
@@ -821,7 +821,7 @@ curl -X 'GET' \
 
 ### `GetWalletTokenIdTransfers`
 
-NFT API gets an object with number of NFT transfers and an array with all transfers of NFT by token id (asynchronous)
+NFT API gets an object with number of NFT transfers and an array with all transfers of NFT by token id (asynchronous).
 
 **Options**:
 
