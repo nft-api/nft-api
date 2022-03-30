@@ -2,24 +2,27 @@
 
 > NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions. Cross-Chain NFT API.
 
-NFT API is a central part of any NFT dapp. Whether you build an NFT game, wallet, marketplace, analytics site, dashboard or something else based on NFTs you need to have a reliable NFT API that can help you get things such as: 
-1) **NFT Metadata**
-2) **NFT Ownership data**
-3) **NFT Transfer data**
-4) **NFT Prices**
+NFT API is a central part of any NFT dapp. Whether you build an NFT game, wallet, marketplace, analytics site, dashboard or something else based on NFTs you need to have a reliable NFT API that can help you get things such as:
+
+1. **NFT Metadata**
+2. **NFT Ownership data**
+3. **NFT Transfer data**
+4. **NFT Prices**
 
 See full [table of contents](https://github.com/nft-api/nft-api/blob/main/README.md#-table-of-contents).
 
 If these features are required in your dapp - keep reading!
 
 ### `Chains supported`
-The NFT API supports the following chains: 
-1) Ethereum (ETH)
-2) Binance Smart Chain (BSC) 
-3) Polygon (MATIC)
-4) Avalanche (AVAX) 
-5) Fantom (FTM)
-6) Testnets are fully supported.
+
+The NFT API supports the following chains:
+
+1. Ethereum (ETH)
+2. Binance Smart Chain (BSC)
+3. Polygon (MATIC)
+4. Avalanche (AVAX)
+5. Fantom (FTM)
+6. Testnets are fully supported.
 
 This API is widely used in the web3 industry and is powering many prominent web3 projects.
 
@@ -31,12 +34,12 @@ If this NFT API helps you - please star this project, every star makes us very h
 
 # 🚀 `Quick Start`
 
-1) Sign up at [Moralis](https://moralis.io?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
-2) See example requests below
-3) Read full docs: https://docs.moralis.io/moralis-server/web3-sdk
+1. Sign up at [Moralis](https://moralis.io?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
+2. See example requests below
+3. Read full docs: https://docs.moralis.io/moralis-server/web3-sdk
 
-You can either call the API endpoints using REST HTTP requests or using the Moralis SDK. 
-Both methods are demonstrated below for each endpoint. 
+You can either call the API endpoints using REST HTTP requests or using the Moralis SDK.
+Both methods are demonstrated below for each endpoint.
 
 # 🤝 `Need help?`
 
@@ -175,7 +178,7 @@ curl -X 'GET' \
 ]
 ```
 
-### `GetNFTsForContract
+### `GetNFTsForContract`
 
 NFT API gets an object with the NFT count for the specified contract and an NFT array belonging to the given address for the specified contract.
 
@@ -319,7 +322,9 @@ NFT API gets NFT transfers by block number or block hash
 
 ```js
 const options = { chain: "bsc", block_number_or_hash: "11284830" };
-const NFTTransfers = await Moralis.Web3API.native.getNFTTransfersByBlock(options);
+const NFTTransfers = await Moralis.Web3API.native.getNFTTransfersByBlock(
+  options
+);
 ```
 
 #### REST
@@ -440,7 +445,9 @@ NFT API gets an object with number of NFT transfers and an array with NFT transf
 
 ```js
 const options = { address: "0xd...07", chain: "bsc" };
-const nftTransfers = await Moralis.Web3API.token.getContractNFTTransfers(options);
+const nftTransfers = await Moralis.Web3API.token.getContractNFTTransfers(
+  options
+);
 ```
 
 #### REST
@@ -642,7 +649,7 @@ curl -X 'GET' \
 
 ### `GetNFTTrades`
 
-NFT API gets
+NFT API gets on object with NFT trades for a given contract and marketplace
 
 **Options**:
 
@@ -702,6 +709,10 @@ curl -X 'GET' \
   ]
 }
 ```
+
+### `GetTokenAddrestransfers`
+
+### `GetTokenAllowance`
 
 ### `GetTokenIdMetadata`
 
@@ -814,3 +825,5 @@ curl -X 'GET' \
   ]
 }
 ```
+
+### `GetWalletTokenIdTransfers`
