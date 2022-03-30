@@ -62,12 +62,9 @@ If you need help with using the NFT API or have other questions - don't hesitate
   - [`GetNFTOwners`](#getnftowners)
   - [`GetNFTTrades`](#getnfttrades)
   - [`GetNftTransfersFromToBlock`](#getnfttransfersfromtoblock)
-  - [`GetTokenAdressTransfers`](#gettokenaddrestransfers)
-  - [`GetTokenAllowance`](#gettokenallowance)
   - [`GetTokenIdMetadata`](#gettokenidmetadata)
   - [`GetTokenIdOwners`](#gettokenidowners)
   - [`GetWalletTokenIdTransfers`](#getwallettokenidtransfers)
-- [Helpful Tools](#helpful-tools)
 
 # 🖼 NFT API Endpoints
 
@@ -710,10 +707,6 @@ curl -X 'GET' \
 }
 ```
 
-### `GetTokenAddrestransfers`
-
-### `GetTokenAllowance`
-
 ### `GetTokenIdMetadata`
 
 NFT API gets data, including metadata (where available), for the given token id of the given contract address.
@@ -827,3 +820,67 @@ curl -X 'GET' \
 ```
 
 ### `GetWalletTokenIdTransfers`
+
+NFT API gets an object with number of NFT transfers and an array with all transfers of NFT by token id (asynchronous)
+
+**Options**:
+
+- `chain` _(optional)_: The blockchain to get data from. Valid values are listed on the intro page in the [`Supported Blockchains`](#supported-blockchains). Default value Eth.
+- `format` _(optional)_: The format of the token id. Available values : decimal, hex. Default value : decimal.
+- `offset` _(optional)_: offset.
+- `limit` _(optional)_: limit.
+- `address` _(required)_: Address of the contract.
+- `token_id` _(requierd)_: The id of the token.
+
+#### Moralis SDK
+
+```js
+const options = {
+  address: "0xd...07",
+  token_id: "1",
+  chain: "eth",
+};
+const transfers = await Moralis.Web3API.token.getWalletTokenIdTransfers(
+  options
+);
+```
+
+#### REST
+
+```bash
+GET ​/nft​/{address}​/{token_id}​/owners
+```
+
+#### CURL
+
+```bash
+curl -X 'GET' \
+  'https://deep-index.moralis.io/api/v2/nft/{address}/{token_id}/transfers?chain=eth&format=decimal' \
+  -H 'accept: application/json' \
+  -H 'X-API-Key: MY-API-KEY'
+```
+
+**Example return**
+
+```json
+[
+  {
+    "block_number": "14238158",
+    "block_timestamp": "2022-02-19T18:49:02.000Z",
+    "block_hash": "0x8124f4a126996d306a90fa00b871b6ed9669a1a9806106b34fa28f3de61e5f8b",
+    "transaction_hash": "0x2db36892fc17bf99a3f6dd8a639f3c704f772858f3961cbcd26b3a42a2cd561e",
+    "transaction_index": 162,
+    "log_index": 419,
+    "value": "0",
+    "contract_type": "ERC721",
+    "transaction_type": "Single",
+    "token_address": "0x7de3085b3190b3a787822ee16f23be010f5f8686",
+    "token_id": "1",
+    "from_address": "0x0000000000000000000000000000000000000000",
+    "to_address": "0x324fb4a58674758e00c3a49409b815de1398bfe8",
+    "amount": "1",
+    "verified": 1,
+    "operator": null
+  }
+]
+```
