@@ -830,7 +830,7 @@ NFT API gets an object with number of NFT transfers and an array with all transf
 - `offset` _(optional)_: offset.
 - `limit` _(optional)_: limit.
 - `address` _(required)_: Address of the contract.
-- `token_id` _(requierd)_: The id of the token.
+- `token_id` _(required)_: The id of the token.
 
 #### Moralis SDK
 
