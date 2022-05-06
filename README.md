@@ -730,7 +730,7 @@ const tokenIdMetadata = await Moralis.Web3API.token.getTokenIdMetadata(options);
 #### REST
 
 ```bash
-GET ​/nft​/{address}​/{token_id}
+GET ​/nft​/{address}​/{/
 ```
 
 #### CURL
@@ -848,7 +848,7 @@ const transfers = await Moralis.Web3API.token.getWalletTokenIdTransfers(
 #### REST
 
 ```bash
-GET ​/nft​/{address}​/{token_id}​/owners
+GET ​/nft​/{address}​/{token_id}​/transfers
 ```
 
 #### CURL
