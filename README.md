@@ -135,7 +135,7 @@ NFT API gets all NFTs from the current user or address. Supports both ERC721 and
 #### Moralis SDK
 
 ```js
-onst options = { chain: 'matic', address: '0x...' };
+const options = { chain: 'matic', address: '0x...' };
 const polygonNFTs = await Moralis.Web3API.account.getNFTs(options);
 ```
 
