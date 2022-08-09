@@ -22,7 +22,8 @@ The NFT API supports the following chains:
 3. Polygon (MATIC)
 4. Avalanche (AVAX)
 5. Fantom (FTM)
-6. Testnets are fully supported.
+6. CRONOS (CRO)
+7. Testnets are fully supported.
 
 This API is widely used in the web3 industry and is powering many prominent web3 projects.
 
