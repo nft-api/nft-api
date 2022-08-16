@@ -23,7 +23,8 @@ The NFT API supports the following chains:
 4. Avalanche (AVAX)
 5. Fantom (FTM)
 6. CRONOS (CRO)
-7. Testnets are fully supported.
+7. Solana (SOL)
+8. Testnets are fully supported.
 
 This API is widely used in the web3 industry and is powering many prominent web3 projects.
 
@@ -35,9 +36,9 @@ If this NFT API helps you - please star this project, every star makes us very h
 
 # 🚀 `Quick Start`
 
-1. Sign up at [Moralis](https://moralis.io?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
+1. [Get an API key](https://docs.moralis.io/reference/getting-the-api-key?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
 2. See example requests below
-3. Read full docs: https://docs.moralis.io/moralis-server/web3-sdk
+3. Read full docs: https://docs.moralis.io/reference/nft-api
 
 You can either call the API endpoints using REST HTTP requests or using the Moralis SDK.
 Both methods are demonstrated below for each endpoint.
