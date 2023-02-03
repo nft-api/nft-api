@@ -34,7 +34,7 @@ This API is widely used in the web3 industry and is powering many prominent web3
 
 If this NFT API helps you - please star this project, every star makes us very happy!
 
-Moralis [NFT API] (https://moralis.io/api/nft/) is the ultimate tool for building an NFT application. Looking to build an NFT project such as an NFT marketplace, a portfolio site, NFT-based authentication or an NFT auction site? If so, Moralis NFT API is the tool for you. 
+Moralis [NFT API](https://moralis.io/api/nft/) is the ultimate tool for building an NFT application. Looking to build an NFT project such as an NFT marketplace, a portfolio site, NFT-based authentication or an NFT auction site? If so, Moralis NFT API is the tool for you. 
 
 It’s never been so easy to fetch NFT metadata, NFT owners, NFT transfers, NFT collection metadata, and much more. This NFT API isn’t just blazing fast - it also features support for a long list of EVM chains, such as Ethereum, BNB Chain, Polygon, Arbitrum, Avalanche, Palm Network, and many more!
 
