@@ -1,16 +1,13 @@
 # Quick Start to Moralis NFT API
 
 1. [Get an API key](https://docs.moralis.io/reference/getting-the-api-key?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
+2. Explore the [documentation guides](https://docs.moralis.io/web3-data-api/evm/nft-api)
+3. Explore the [full list of endpoints](https://github.com/nft-api/nft-api/blob/main/README.md#-list-of-nft-api-endpoints)
+4. Explore [API reference](https://docs.moralis.io/web3-data-api/evm/reference#nft-api)
 
-2. Explore the [full list of endpoints](https://github.com/nft-api/nft-api/blob/main/README.md#-list-of-nft-api-endpoints)
+## Boost Your dApp with the Moralis NFT API
 
-3. Explore [Moralis NFT API documentation guides](https://docs.moralis.io/web3-data-api/evm/nft-api)
-
-4. Explore [Moralis NFT API reference](https://docs.moralis.io/web3-data-api/evm/reference#nft-api)
-
-## Supercharge Your NFT dApp with the Moralis NFT API
-
-> NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions. Cross-Chain NFT API.
+> NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions, and Cross-Chain NFT API.
 
 The Moralis NFT API is your ultimate ally for creating a top-tier NFT dApp. Whether you are venturing into the world of NFT gaming, building a secure NFT wallet, launching a bustling NFT marketplace, crafting insightful NFT analytics tools, developing a dazzling NFT dashboard, or exploring any NFT-based endeavor, you need the robust Moralis NFT API in your toolkit!
 
@@ -31,8 +28,6 @@ In the NFT ecosystem, data reigns supreme, and the Moralis NFT API is your gatew
 If these powerful features are essential for your dApp's success (and they definitely are!), read on to embark on a remarkable NFT journey with Moralis!
 
 ## List of NFT API Endpoints
-
-You can either call the API endpoints using REST HTTP requests or using the Moralis SDK.
 
 The following table contains a list of all NFT API endpoints:
 
