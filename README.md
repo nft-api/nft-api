@@ -2,7 +2,7 @@
 
 1. [Get an API key](https://docs.moralis.io/reference/getting-the-api-key?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
 
-2. Explore the [full list of endpoints](https://github.com/nft-api/nft-api/blob/main/README.md#-List-of-nft-api-endpoints)
+2. Explore the [full list of endpoints](https://github.com/nft-api/nft-api/blob/main/README.md#-list-of-nft-api-endpoints)
 
 3. Explore [Moralis NFT API documentation guides](https://docs.moralis.io/web3-data-api/evm/nft-api)
 
