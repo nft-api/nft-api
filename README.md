@@ -11,7 +11,7 @@ Join Moralis and revolutionize your NFT app development, creating meaningful sha
 3. Explore the [full list of endpoints](https://github.com/nft-api/nft-api/blob/main/README.md#-list-of-nft-api-endpoints)
 4. Explore [API reference](https://docs.moralis.io/web3-data-api/evm/reference#nft-api)
 
-## Boost Your dApp with the Moralis NFT API
+## Boost Your dApp with the NFT API
 
 The Moralis NFT API is your ultimate ally for creating a top-tier NFT dApp. Whether you are venturing into the world of NFT gaming, building a secure NFT wallet, launching a bustling NFT marketplace, crafting insightful NFT analytics tools, developing a dazzling NFT dashboard, or exploring any NFT-based endeavor, you need the robust Moralis NFT API in your toolkit!
 
