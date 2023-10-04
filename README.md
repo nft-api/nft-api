@@ -1,4 +1,10 @@
-# Quick Start to Moralis NFT API
+# Moralis NFT API
+
+Unlock the potential of your NFT app with [Moralis' NFT API](https://moralis.io/api/nft/). Our cross-chain NFT API solution simplifies the process of launching, verifying, analyzing, trading, and showcasing NFTs. Designed by developers for developers, our API empowers you to build remarkable NFT experiences effortlessly.
+
+Join Moralis and revolutionize your NFT app development, creating meaningful shared experiences for your users across the web3 ecosystem. Explore our NFT API to access the top features and unlock cross-chain NFT compatibility, making your NFT app development faster and more efficient than ever.
+
+## Quick Start to NFT API
 
 1. [Get an API key](https://docs.moralis.io/reference/getting-the-api-key?utm_source=GitHub&utm_medium=NFT+API&utm_campaign=Moralis+Web3+Docs)
 2. Explore the [documentation guides](https://docs.moralis.io/web3-data-api/evm/nft-api)
@@ -6,8 +12,6 @@
 4. Explore [API reference](https://docs.moralis.io/web3-data-api/evm/reference#nft-api)
 
 ## Boost Your dApp with the Moralis NFT API
-
-> NFT API that returns resolved metadata and has all information about all NFT collections, users, transactions, and Cross-Chain NFT API.
 
 The Moralis NFT API is your ultimate ally for creating a top-tier NFT dApp. Whether you are venturing into the world of NFT gaming, building a secure NFT wallet, launching a bustling NFT marketplace, crafting insightful NFT analytics tools, developing a dazzling NFT dashboard, or exploring any NFT-based endeavor, you need the robust Moralis NFT API in your toolkit!
 
@@ -18,12 +22,16 @@ The Moralis NFT API is your ultimate ally for creating a top-tier NFT dApp. Whet
 In the NFT ecosystem, data reigns supreme, and the Moralis NFT API is your gateway to success. Unlock a world of features to take your dApp to the next level:
 
 1. **NFT Metadata**: Access stunning NFT metadata effortlessly to showcase your digital art, collectibles, and assets.
-
 2. **NFT Ownership Data**: Dive into ownership records to personalize the NFT experience and engage your users.
-
 3. **NFT Transfer Data**: Seamlessly track NFT transfers and transactions, ensuring a smooth user journey.
-
 4. **NFT Price Insights**: Stay ahead of the curve with real-time NFT price data and market trends, providing users with valuable financial information.
+5. **Cross-Chain Compatibility:** Seamlessly access NFT data across Ethereum, Polygon, and other blockchains. No more tedious and time-consuming data retrieval – it's all at your fingertips.
+6.  **Universal Accessibility:** Find, verify ownership, and access transfer history and collection information for any NFT, without navigating complex smart contracts. We make NFTs universally accessible.
+7.  **Developer-Centric:** Our NFT Metadata API provides instant access to metadata, traits, and collection details, saving you countless hours of development work and supercharging your project.
+8.  **Fetch and Filter NFTs:** Easily retrieve comprehensive data for Ethereum, Polygon, and Solana NFT projects.
+9.  **Transaction History:** Effortlessly access all NFT transactions associated with a specific address through a simple request.
+10.  **Collection Insights:** Instantly gather real-time data about NFT collections, including traits, ownership, and transfer history, using just one API call.
+11.  **Ownership Verification:** With NFT ownership constantly changing, our API ensures accurate and up-to-date ownership verification to prevent misrepresentations and unauthorized access.
 
 If these powerful features are essential for your dApp's success (and they definitely are!), read on to embark on a remarkable NFT journey with Moralis!
 
