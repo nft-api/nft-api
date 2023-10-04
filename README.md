@@ -83,6 +83,6 @@ Moralis [NFT API](https://moralis.io/api/nft/) is the ultimate tool for building
 
 It’s never been so easy to fetch NFT metadata, NFT owners, NFT transfers, NFT collection metadata, and much more. This NFT API isn’t just blazing fast - it also features support for a long list of EVM chains, such as Ethereum, BNB Chain, Polygon, Arbitrum, Avalanche, Palm Network, and many more!
 
-# 🤝 Need help?
+## 🤝 Need help?
 
 If you need help with using the NFT API or have other questions - don't hesitate to write in our community forum and we will check asap. [Forum link](https://forum.moralis.io/). We are answering questions 24/7
